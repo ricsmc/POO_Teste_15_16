@@ -13,7 +13,16 @@ public class ListaEleitoral {
         this.porEleger = candidatos.stream().filter(x-> !(x.getEleito())).collect(Collectors.toList());
     }
 
-    
+    public Candidato aEleger(){
+        return this.porEleger.get(0);
 
+    }
+
+    public void Elege() throws EmptyListException{
+        this.aEleger().setEleito(true);
+        this.eleitos.add(this.aEleger());
+        this.porEleger.remove(this.aEleger());
+    }
+    
 
 }

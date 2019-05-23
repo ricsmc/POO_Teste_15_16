@@ -4,4 +4,8 @@ public class Candidato {
     public boolean getEleito(){
         return this.eleito;
     }
+
+    public  void setEleito(boolean eleito){
+        this.eleito = eleito;
+    }
 }
